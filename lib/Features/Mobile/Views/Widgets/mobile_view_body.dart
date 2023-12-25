@@ -81,7 +81,6 @@ class _MobileViewBodyState extends State<MobileViewBody> with SingleTickerProvid
               end: -50,
             ).then().fade().then().shimmer(duration: 2.seconds, curve: Curves.easeInOut),
 
-
             SizedBox(height: MediaQuery.sizeOf(context).height * 0.05),
 
             Text('WELCOME TO MY PORTFOLIO,', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10.sp, color: babyPowder)),

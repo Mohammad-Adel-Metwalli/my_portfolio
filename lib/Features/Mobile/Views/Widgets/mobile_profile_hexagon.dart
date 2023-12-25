@@ -16,10 +16,21 @@ class MobileProfileHexagon extends StatelessWidget
       child: Transform.rotate(
         angle: - pi * 18 / 12,
         child: HexagonWidget.flat(
-          height: 250.h,
-          width: 250.w,
+          height: 280.h,
+          width: 280.w,
           color: majorellePurple,
           cornerRadius: 110,
+
+          child: Transform.rotate(
+            angle: pi / 5-2.2,
+            child: Center(
+                child: Image(
+                  image: const AssetImage('Assets/Images/Hexagonal Profile Photo.png'),
+                  height: 220.h,
+                  width: 220.w,
+                )
+            ),
+          ),
         ),
       ),
     );

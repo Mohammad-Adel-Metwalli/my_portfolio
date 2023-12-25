@@ -11,6 +11,6 @@ class HexagonSkillsListItem extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return HexagonSkills(isThereChild: false, index: index);
+    return HexagonSkills(isThereChild: true, index: index);
   }
 }
