@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Core/Utils/constant_colors.dart';
@@ -19,7 +20,11 @@ class IconsOfWorkExperience extends StatelessWidget
       child: Container(
         height: 80.h,
         width: 80.h,
-        decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: lightPurpleAndBlue, width: 6.5), color: babyPowder),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(color: lightPurpleAndBlue, width: 6.5), color: babyPowder,
+          image: index == 2 || index == 4 || index == 5 ? DecorationImage(image: AssetImage(someLogos[index]!), fit: BoxFit.cover) : const DecorationImage(image: AssetImage('')),
+        ),
 
         child: Center(child: workExperience[index]),
       ),

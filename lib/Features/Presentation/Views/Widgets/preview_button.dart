@@ -24,7 +24,7 @@ class _PreviewButtonState extends State<PreviewButton>
   @override
   Widget build(BuildContext context)
   {
-    return GestureDetector(
+    return previewCodeLinks[widget.index] == '' ? const SizedBox.shrink() : GestureDetector(
       onTap: () => launchUrlMedia(previewCodeLinks[widget.index]),
 
       child: MouseRegion(

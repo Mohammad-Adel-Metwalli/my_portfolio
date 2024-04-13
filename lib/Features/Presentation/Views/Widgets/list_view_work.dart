@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../Core/Utils/constants.dart';
 import 'list_view_work_item.dart';
 
 class ListViewWork extends StatelessWidget
@@ -12,7 +13,7 @@ class ListViewWork extends StatelessWidget
   {
     return Center(
       child: ListView.builder(
-        itemCount: 2,
+        itemCount: workExperienceListSubtitle.length,
         scrollDirection: Axis.horizontal,
         padding: EdgeInsets.only(left: MediaQuery.sizeOf(context).width * 0.085),
         itemBuilder: (context, index) => ListViewWorkItem(index: index),

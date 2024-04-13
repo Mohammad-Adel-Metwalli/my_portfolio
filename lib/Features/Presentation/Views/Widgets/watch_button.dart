@@ -24,7 +24,7 @@ class _WatchButtonState extends State<WatchButton>
   @override
   Widget build(BuildContext context)
   {
-    return GestureDetector(
+    return watchAppLinks[widget.index] == '' ? const SizedBox.shrink() : GestureDetector(
       onTap: () => launchUrlMedia(watchAppLinks[widget.index]),
 
       child: MouseRegion(
