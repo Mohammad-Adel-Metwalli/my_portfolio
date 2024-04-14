@@ -8,7 +8,7 @@ import '../../../../Core/Utils/constants.dart';
 import '../../../Presentation/Views/Widgets/brief_section.dart';
 import '../../../Presentation/Views/Widgets/copy_right_section.dart';
 import '../../../Presentation/Views/Widgets/distance_zero_triangle.dart';
-import '../../../Presentation/Views/Widgets/download_cv_section.dart';
+import '../../../Presentation/Views/Widgets/view_cv_section.dart';
 import 'mobile_auto_written_text_and_palestine_flag.dart';
 import 'mobile_my_skills_list.dart';
 import 'mobile_profile.dart';
@@ -103,7 +103,7 @@ class _MobileViewBodyState extends State<MobileViewBody> with SingleTickerProvid
             MouseRegion(
               onEnter: (event) => setState(() => cvHover = true),
               onExit: (event) => setState(() => cvHover = false),
-              child: DownloadCvSection(cvHover: cvHover),
+              child: ViewCvSection(cvHover: cvHover),
             ),
 
             const CopyRightSection(),

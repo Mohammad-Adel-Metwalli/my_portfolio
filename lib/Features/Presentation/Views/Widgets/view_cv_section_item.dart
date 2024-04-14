@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../Core/Utils/constant_colors.dart';
 
-class DownloadCvSectionItem extends StatelessWidget
+class ViewCvSectionItem extends StatelessWidget
 {
-  const DownloadCvSectionItem({
+  const ViewCvSectionItem({
     super.key,
     required this.cvHover,
   });
@@ -19,7 +19,7 @@ class DownloadCvSectionItem extends StatelessWidget
       children: [
         const Spacer(),
 
-        Center(child: Text('Download CV', style: TextStyle(fontSize: MediaQuery.sizeOf(context).width <= 500 ? 15.sp : 7.sp, color: cvHover ? blackColor : babyPowder))),
+        Center(child: Text('View Resume', style: TextStyle(fontSize: MediaQuery.sizeOf(context).width <= 500 ? 15.sp : 7.sp, color: cvHover ? blackColor : babyPowder))),
 
         SizedBox(width: MediaQuery.sizeOf(context).width * 0.005),
 

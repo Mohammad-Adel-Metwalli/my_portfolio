@@ -3,11 +3,11 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Core/Utils/Functions/used_functions.dart';
 import '../../../../Core/Utils/constant_colors.dart';
-import 'download_cv_section_item.dart';
+import 'view_cv_section_item.dart';
 
-class DownloadCvSection extends StatefulWidget
+class ViewCvSection extends StatefulWidget
 {
-  const DownloadCvSection({
+  const ViewCvSection({
     super.key,
     required this.cvHover,
   });
@@ -15,10 +15,10 @@ class DownloadCvSection extends StatefulWidget
   final bool cvHover;
 
   @override
-  State<DownloadCvSection> createState() => _DownloadCvSectionState();
+  State<ViewCvSection> createState() => _ViewCvSectionState();
 }
 
-class _DownloadCvSectionState extends State<DownloadCvSection>
+class _ViewCvSectionState extends State<ViewCvSection>
 {
   @override
   Widget build(BuildContext context)
@@ -26,7 +26,7 @@ class _DownloadCvSectionState extends State<DownloadCvSection>
     return Padding(
       padding: const EdgeInsets.all(16),
       child: GestureDetector(
-        onTap: () async => downloadPdf(),
+        onTap: () async => launchUrlMedia('https://firebasestorage.googleapis.com/v0/b/mohammad-adel-metwally-2-bab35.appspot.com/o/Mohammad-Adel-Metwalli-Resume.pdf?alt=media&token=9b6a3e10-5d2d-41cd-ab49-0de6d06f9fcd'),
 
         child: AnimatedContainer(
           duration: 500.milliseconds,
@@ -34,7 +34,7 @@ class _DownloadCvSectionState extends State<DownloadCvSection>
           width: MediaQuery.sizeOf(context).width <= 500 ? 175.w : 100.w,
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: widget.cvHover ? babyPowder : Colors.transparent, border: Border.all(color: babyPowder, width: 2)),
 
-          child: DownloadCvSectionItem(cvHover: widget.cvHover),
+          child: ViewCvSectionItem(cvHover: widget.cvHover),
         ),
       ),
     );

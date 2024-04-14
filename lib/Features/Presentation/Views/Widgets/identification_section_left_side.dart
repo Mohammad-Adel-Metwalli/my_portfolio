@@ -5,7 +5,7 @@ import 'package:my_portfolio/Features/Presentation/Views/Widgets/zero_distance_s
 import '../../../../Core/Utils/constant_colors.dart';
 import 'auto_written_text_with_palestine_flag.dart';
 import 'copy_right_section.dart';
-import 'download_cv_section.dart';
+import 'view_cv_section.dart';
 
 class IdentificationSectionLeftSide extends StatefulWidget
 {
@@ -54,7 +54,7 @@ class _IdentificationSectionLeftSideState extends State<IdentificationSectionLef
         MouseRegion(
           onEnter: (event) => setState(() => cvHover = true),
           onExit: (event) => setState(() => cvHover = false),
-          child: DownloadCvSection(cvHover: cvHover),
+          child: ViewCvSection(cvHover: cvHover),
         ),
 
         const CopyRightSection(),

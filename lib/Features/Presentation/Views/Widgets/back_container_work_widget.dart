@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,23 +16,27 @@ class BackContainerWorkWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),
 
-        Text(workExperienceList[index], style: index == 2 ? GoogleFonts.amiri(color: babyPowder, fontSize: 8.sp, fontWeight: FontWeight.bold) : TextStyle(color: babyPowder, fontSize: 8.sp), textAlign: TextAlign.center),
+          Text(workExperienceList[index], style: index == 2 ? GoogleFonts.amiri(color: babyPowder, fontSize: 8.sp, fontWeight: FontWeight.bold) : TextStyle(color: babyPowder, fontSize: 8.sp), textAlign: TextAlign.center),
 
-        SizedBox(height: MediaQuery.sizeOf(context).height * 0.05),
+          SizedBox(height: MediaQuery.sizeOf(context).height * 0.05),
 
-        ListTile(
-          subtitle: Text(workExperienceListSubtitle[index], style: TextStyle(color: babyPowder, fontSize: MediaQuery.sizeOf(context).width <= 995 ? (5.5).sp : 4.sp), overflow: TextOverflow.ellipsis, maxLines: index == 2 || index == 4 || index == 5 ? 8 : 11),
-        ),
+          ListTile(
+            subtitle: Text(workExperienceListSubtitle[index], style: TextStyle(color: babyPowder, fontSize: MediaQuery.sizeOf(context).width <= 995 ? (5.5).sp : 4.sp)),
+          ),
 
-        SizedBox(height: index == 1 ? MediaQuery.sizeOf(context).height * 0.02 : MediaQuery.sizeOf(context).height * 0.045),
+          SizedBox(height: index == 1 ? MediaQuery.sizeOf(context).height * 0.02 : MediaQuery.sizeOf(context).height * 0.045),
 
-        WatchAndPreviewButtons(index: index),
-      ],
+          WatchAndPreviewButtons(index: index),
+
+          SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),
+        ],
+      ),
     );
   }
 }
